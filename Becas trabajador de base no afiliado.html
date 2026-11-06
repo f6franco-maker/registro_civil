@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>Becas trabajador de base no afiliado — Investigación nacional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,900&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f2f3f5; --surface:#ffffff; --surface2:#eef1f4;
+  --ink:#16202e; --ink2:#3d4a5c; --muted:#6b7a8d; --line:#dde2e8;
+  --navy:#14263f; --navy2:#1e3a5f; --gold:#9a7b2e; --gold-bg:#fdf6dd;
+  --green:#166534; --green-bg:#dcfce7; --amber:#92400e; --amber-bg:#fef3c7;
+  --red:#991b1b; --red-bg:#fee2e2; --teal:#0f4c4c; --teal-bg:#ccfbf1;
+  --radius:14px;
+}
+@media(prefers-color-scheme:dark){
+  :root{--bg:#0f141c;--bg2:#151d29;--surface:#182231;--surface2:#1e2c40;--ink:#eef2f7;--ink2:#c2cedd;--muted:#94a3b8;--line:#2a3a52;--navy:#dbeafe;--navy2:#bfdbfe;--gold:#facc15;--gold-bg:#2a2310;--green:#86efac;--green-bg:#12291c;--amber:#fcd34d;--amber-bg:#2b2108;--red:#fca5a5;--red-bg:#2d1414;--teal:#5eead4;--teal-bg:#0f2a2a}
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Public Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:var(--navy2);text-decoration:underline;text-underline-offset:2px;word-break:break-word}
+.serif{font-family:"Source Serif 4",Georgia,serif}
+.mono{font-family:"IBM Plex Mono",monospace}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 64px}
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:10px 18px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.topbar-in::-webkit-scrollbar{display:none}
+.topbar a{white-space:nowrap;text-decoration:none;font-size:13px;font-weight:700;color:var(--ink2);padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.topbar a:hover{background:var(--surface2)}
+.hero{padding:30px 0 8px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold)}
+h1{font-family:"Source Serif 4",Georgia,serif;font-size:clamp(30px,5vw,52px);line-height:.95;letter-spacing:-.02em;margin:10px 0 12px;color:var(--navy)}
+.lead{font-size:18px;line-height:1.55;color:var(--ink2);max-width:820px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.chip{font-size:12.5px;font-weight:700;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--bg2)}
+.chip strong{color:var(--navy)}
+.alert{border:1px solid #f59e0b55;background:var(--amber-bg);border-radius:var(--radius);padding:16px 18px;margin:20px 0}
+.alert b{color:var(--amber)}
+.quote{border-left:4px solid var(--gold);background:var(--gold-bg);padding:18px 20px;border-radius:0 var(--radius) var(--radius) 0;margin:18px 0}
+.quote p{margin:0;font-family:"Source Serif 4",Georgia,serif;font-size:19px;line-height:1.45}
+.quote cite{display:block;margin-top:10px;font-size:13px;font-style:normal;color:var(--ink2);font-family:"Public Sans",sans-serif}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card h3{margin:0 0 8px;font-size:16px}
+.card p,.card li{font-size:14.5px;color:var(--ink2)}
+section{padding:34px 0 6px;border-top:1px solid var(--line);margin-top:28px}
+section:first-of-type{border-top:none}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:28px;line-height:1.1;margin:0 0 8px;color:var(--navy)}
+h2+p.lead2{color:var(--ink2);max-width:760px;margin:0 0 18px}
+.numlist{counter-reset:n;display:grid;gap:12px}
+.numitem{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.numitem::before{counter-increment:n;content:counter(n);flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px}
+@media(prefers-color-scheme:dark){.numitem::before{background:var(--gold);color:#111}}
+.numitem p{margin:2px 0 0;font-size:14.5px;color:var(--ink2)} .numitem strong{color:var(--ink)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;align-items:center}
+.controls input{flex:1;min-width:210px;padding:11px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:14px}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer}
+.btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media(prefers-color-scheme:dark){.btn.active{background:var(--gold);color:#111;border-color:var(--gold)}}
+.tesis-grid{display:grid;gap:12px}
+.tesis{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:var(--surface)}
+.tesis-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.tesis-code{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:13px;background:var(--surface2);padding:5px 8px;border-radius:8px}
+.badge{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:5px 8px;border-radius:999px}
+.badge-yes{background:var(--green-bg);color:var(--green)} .badge-no{background:var(--surface2);color:var(--ink2)} .badge-warn{background:var(--amber-bg);color:var(--amber)} .badge-juris{background:var(--teal-bg);color:var(--teal)}
+.tesis h3{font-size:14.5px;line-height:1.45;margin:10px 0 8px;text-transform:none}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;font-size:13px;color:var(--ink2)}
+@media(max-width:700px){.meta{grid-template-columns:1fr 1fr}}
+.meta b{display:block;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.compare{grid-template-columns:1fr}}
+.compare .card:first-child{border-top:4px solid var(--green)} .compare .card:last-child{border-top:4px solid var(--gold)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}} @media(max-width:540px){.steps{grid-template-columns:1fr}}
+.step{padding:16px;border-radius:var(--radius);background:var(--navy);color:#fff}
+.step span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8;font-weight:800}
+.step p{font-size:14px;opacity:.92}
+@media(prefers-color-scheme:dark){.step{background:var(--surface2);color:var(--ink)}}
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:20px;display:grid;gap:18px}
+.timeline div{position:relative} .timeline div::before{content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--bg)}
+.timeline b{font-size:14px} .timeline p{margin:2px 0 0;font-size:14px;color:var(--ink2)}
+.risk{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:var(--surface)}
+.risk-grid{display:grid;gap:12px}
+.openlist{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.openlist li{display:flex;gap:12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:14.5px;color:var(--ink2)}
+.openlist li::before{content:"?";flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--amber-bg);color:var(--amber);display:grid;place-items:center;font-weight:900}
+.sources{font-size:13.5px;color:var(--ink2)} .sources li{margin:6px 0}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+@media(max-width:700px){.kpi{grid-template-columns:1fr 1fr}}
+.kpi div{background:var(--bg2);border-radius:var(--radius);padding:16px;text-align:center}
+.kpi strong{display:block;font-family:"Source Serif 4",serif;font-size:30px;color:var(--navy)} .kpi span{font-size:12.5px;font-weight:700;color:var(--ink2)}
+.small{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px} th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top} th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.stack-table{display:block} @media(max-width:700px){.stack-table thead{display:none}.stack-table tr{display:block;border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:10px}.stack-table td{display:block;border:none;padding:4px 6px}}
+.ph{background:var(--amber-bg);color:var(--amber);font-family:"IBM Plex Mono",monospace;font-size:.92em;padding:1px 5px;border-radius:5px;font-weight:700;white-space:normal}
+.escrito{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;font-size:15px;line-height:1.75;color:var(--ink)}
+.escrito h3{font-family:"Source Serif 4",Georgia,serif;font-size:19px;margin:24px 0 8px;color:var(--navy)} .escrito h3:first-child{margin-top:0}
+.escrito p{margin:0 0 12px;text-align:justify} .escrito ol,.escrito ul{margin:0 0 14px;padding-left:22px} .escrito li{margin:6px 0;text-align:justify}
+.escrito .rubro{text-align:right;font-size:13.5px;color:var(--ink2)} .escrito .centro{text-align:center}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.double{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.double{grid-template-columns:1fr}}
+.weak{border-top:4px solid var(--amber)} .strong{border-top:4px solid var(--green)}
+.datos{list-style:none;padding:0;margin:0;display:grid;gap:10px}.datos li{padding:13px 14px;border:1px dashed var(--gold);border-radius:12px;background:var(--gold-bg);font-size:14.5px;color:var(--ink2)}
+</style>
+</head>
+<body>
+<nav class="topbar"><div class="topbar-in">
+<a href="#resumen">Resumen</a><a href="#defensa">Doble defensa</a><a href="#escrito">Escrito a presentar</a><a href="#tesis">Tesis verificadas</a><a href="#criterios">Criterios nuevos</a><a href="#laboral">Vía laboral</a><a href="#amparo">Amparo</a><a href="#estrategia">Estrategia</a><a href="#riesgos">Riesgos</a><a href="#pendientes">Pendientes</a><a href="#fuentes">Fuentes</a>
+</div></nav>
+
+<main class="wrap">
+<header class="hero">
+<p class="eyebrow">Córdoba, Veracruz · Investigación nacional · Corte: noviembre de 2026</p>
+<h1>Becas para hijos de trabajador de base no afiliado</h1>
+<p class="lead">Reclamación de las becas del art. 78 de las Condiciones Generales de Trabajo (CGT) 2026 del Ayuntamiento de Córdoba, convocadas solo para “hijos de empleados sindicalizados” y repartidas por cupos entre CROC, CTM, CROM y UEMAC. Defensa en <strong>doble vía</strong>: primero, la de los <strong>sindicatos sin registro</strong>, para que no se suspenda la dispersión ni se les excluya por falta de toma de nota; y en subsidio, autónoma, la <strong>defensa individual</strong> del trabajador de base: su derecho nace de ser trabajador de base, no de la afiliación sindical.</p>
+<div class="chips">
+<span class="chip"><strong>Hecho central:</strong> hasta 115 becas · promedio 8.0 · rotación · lista de espera</span>
+<span class="chip"><strong>Base legal:</strong> art. 137 LESCV</span>
+<span class="chip"><strong>Vía 1:</strong> sindicatos sin registro — no exclusión por falta de toma de nota</span>
+<span class="chip"><strong>Vía 2 · subsidiaria:</strong> trabajador de base no afiliado — lista única</span>
+<span class="chip"><strong>Prescripción:</strong> 1 año — arts. 100–101 LESCV</span>
+</div>
+<div class="kpi">
+<div><strong>12 / 12</strong><span>tesis en tarjetas verificadas</span></div>
+<div><strong>2</strong><span>con advertencia*</span></div>
+<div><strong>1</strong><span>tesis central persuasiva en Veracruz</span></div>
+<div><strong>0</strong><span>tesis específica sobre becas en CGT localizada</span></div>
+</div>
+<p class="small">* I.6o.T.455 L, superada por la contradicción 2/2018; y 2a./J. 8/2021, número duplicado entre épocas — ver detalle abajo.</p>
+
+<div class="alert"><b>Advertencia sobre los hechos:</b> No se localizó en línea el texto del art. 78 de las CGT 2026 de Córdoba ni el memorándum de Recursos Humanos. Todo lo afirmado sobre su contenido proviene del contexto aportado y debe acreditarse con la CGT depositada ante el Tribunal (arts. 138–139 LESCV). El monto de la beca tampoco fue verificado.</div>
+
+<div class="quote">
+<p>“Las Condiciones Generales de Trabajo se extienden a todos los trabajadores que ampara esta Ley, que laboren para la misma Entidad Pública aunque no pertenezcan al Sindicato.”</p>
+<cite>Art. 137, Ley Estatal del Servicio Civil de Veracruz (Ley 364) — texto vigente, última actualización del Congreso de Veracruz consultada: 7 de octubre de 2026.</cite>
+</div>
+</header>
+
+<section id="resumen">
+<h2>Respuesta corta</h2>
+<p class="lead2">El núcleo de la reclamación tiene sustento sólido, pero el remedio y la vía importan tanto como el derecho.</p>
+<div class="numlist">
+<div class="numitem"><div><strong>El art. 137 LESCV es literal y favorable.</strong><p>La jurisprudencia obligatoria en el Séptimo Circuito, <b>PC.VII.L. J/2 L (10a.), reg. 2009608</b>, interpreta ese artículo excluyendo solo a los trabajadores de <b>confianza</b> (art. 11-I LESCV), no a los de base no afiliados. A contrario sensu, el de base sí está cubierto.</p></div></div>
+<div class="numitem"><div><strong>La tesis más directa no es obligatoria en Veracruz.</strong><p><b>PC.I.L. J/40 L (10a.), reg. 2017733</b> — CGT aplicables a todos los trabajadores de base, afiliados o no al mayoritario, con inaplicación de la disposición restrictiva — es jurisprudencia del Primer Circuito: en el Séptimo Circuito es <b>persuasiva, no obligatoria</b>. Ninguna tesis obligatoria en el Séptimo dice lo mismo con ese alcance.</p></div></div>
+<div class="numitem"><div><strong>Todas las tesis citadas existen.</strong><p>Ninguna es inexistente. Dos advertencias: I.6o.T.455 L fue superada/absorbida por la contradicción 2/2018 que dio lugar a PC.I.L. J/40 L (y en realidad era un criterio pro-extensión, no contrario); y hay <b>dos tesis 2a./J. 8/2021</b>: la de 10a. Época, reg. 2022885 (cuotas sindicales, la relevante) y la de 11a. Época, reg. 2023722 (incapacidad ISSSTE, irrelevante). Citar siempre con época y registro.</p></div></div>
+<div class="numitem"><div><strong>La vía idónea es la laboral.</strong><p>Tribunal de Conciliación y Arbitraje del Poder Judicial del Estado de Veracruz (Xalapa), por demanda individual de prestación extralegal + inaplicación. El amparo indirecto por el no pago es en principio improcedente porque el Ayuntamiento actúa como patrón, no como autoridad (III.4o.T. J/3 (10a.), reg. 2011298). Solo cabe amparo indirecto por omisión de responder petición (art. 8 CPEUM) — que obliga a responder, no a conceder — y, en su caso, contra el memorándum si se le reconoce carácter de acto de autoridad general, punto no resuelto por tesis localizada.</p></div></div>
+<div class="numitem"><div><strong>Novedad 2026: inaplicar sí, reescribir no.</strong><p>El Pleno de la SCJN en el <b>ADR 3667/2025 (10-feb-2026)</b> resolvió que los tribunales laborales pueden <b>inaplicar</b> cláusulas inconstitucionales/discriminatorias en el caso concreto, pero <b>no pueden reescribirlas ni modificar su texto</b>. Eso deja obsoleta la parte de I.16o.T.4 L que ordenaba “modificar las cláusulas”.</p></div></div>
+<div class="numitem"><div><strong>La proporcionalidad no es el modelo de este caso.</strong><p><b>PR.P.T.CS. J/16 L (12a.), reg. 2032404 (10-jul-2026)</b>, del Pleno Regional Centro-Sur, sí es obligatoria en el Séptimo Circuito y fija extensión <b>proporcional</b> de beneficios a sindicatos minoritarios. Útil como contexto, pero su titular es el sindicato minoritario. El trabajador individual no afiliado tiene derecho a <b>extensión íntegra</b> y a la lista única por criterios objetivos, no a un cupo.</p></div></div>
+</div>
+<div class="alert" style="margin-top:16px"><b>Método y límite:</b> el navegador en vivo no abrió <span class="mono">sjf.scjn.gob.mx</span> (dos intentos, <i>page_gone</i>), por lo que la verificación se hizo por índice web contra espejos que reproducen registro, localización y texto del SJF (Juristeca, FedESSP, Paréntesis Legal), resoluciones que transcriben las tesis y el portal SJF2. Donde la fuente es un espejo y no el SJF directo, se indica en Fuentes. No se inventó ningún registro ni rubro.</div>
+</section>
+
+<section id="defensa">
+<h2>Nueva posición — defensa en doble vía</h2>
+<p class="lead2">Ya no es solo el reclamo de un trabajador aislado. La página y el escrito se reordenan para competir en dos frentes que no dependen uno del otro: si cae la vía colectiva, la individual sigue en pie por sí misma.</p>
+<div class="double">
+<article class="card weak"><h3>Vía 1 · Sindicatos sin registro — la que se intenta primero</h3><p><b>Qué se pide:</b> que no se suspenda la dispersión de las becas, que no se excluya a los sindicatos sin registro por el solo hecho de carecer de toma de nota / registro, y que sus agremiados de base puedan concursar mientras se define su situación registral.</p><p><b>Fundamento que se invoca:</b> libertad sindical en su aspecto positivo y colectivo — constituir sindicato y afiliarse — arts. 1 y 123, apartado B, fracción X, CPEUM, y <b>P./J. 43/99, reg. 193868</b>. Como contexto, la extensión a minoritarios de <b>PR.P.T.CS. J/16 L (12a.), reg. 2032404</b>, obligatoria en el Séptimo Circuito, y la prohibición de monopolizar trámites del mayoritario, <b>2a. IV/2012, reg. 160295</b>.</p><p style="background:var(--amber-bg);padding:12px;border-radius:10px"><b>Advertencia — es la vía más débil:</b> los criterios que extienden beneficios a sindicatos minoritarios presuponen organizaciones formalmente constituidas. La falta de registro puede ser usada por el Ayuntamiento para negar personería y existencia jurídica al sindicato. Por eso esta vía se plantea sin hacer depender de ella el derecho individual, y el informe de investigación <b>no verificó el régimen registral sindical de la LESCV</b>: antes de presentar, hay que cotejarlo y acreditar acta constitutiva, padrón y, en su caso, solicitud de registro en trámite.</p></article>
+<article class="card strong"><h3>Vía 2 · Defensa individual — subsidiaria y autónoma</h3><p><b>Qué se pide, en subsidio y por derecho propio:</b> la inclusión del trabajador de base no afiliado — y, en su caso, de cada trabajador agremiado a un sindicato sin registro que comparezca en lo individual — en <b>una sola lista única</b> ordenada por los criterios objetivos del art. 78: promedio 8.0, rotación y lista de espera.</p><p><b>Fundamento:</b> <b>art. 137 LESCV</b> — las CGT se extienden a todos los trabajadores aunque no pertenezcan al sindicato —; <b>PC.VII.L. J/2 L, reg. 2009608</b>, obligatoria en el Séptimo Circuito, que solo excluye a los de confianza; libertad sindical negativa, <b>P./J. 43/99</b>; e inaplicación de la cláusula restrictiva conforme a <b>PC.I.L. J/40 L, reg. 2017733</b> — persuasiva en Veracruz — sin pedir reescribir la CGT, conforme al <b>ADR 3667/2025</b>.</p><p><b>Por qué es la más fuerte:</b> no necesita que se reconozca a ningún sindicato. Aunque el Tribunal niegue personería a los sindicatos sin registro, debe resolver la pretensión individual, que tiene interés jurídico propio y prescripción de 1 año (arts. 100–101 LESCV).</p></article>
+</div>
+<div class="alert"><b>Regla de oro del escrito:</b> nunca acumular como pretensión principal la impugnación de la toma de nota de CROC, CTM, CROM o UEMAC. El trabajador en lo individual carece de interés legítimo para eso — <b>2a./J. 50/2024 (11a.), reg. 2028954</b>. Lo que se combate es la <b>exclusión</b> — del sindicato sin registro y del trabajador de base — no la existencia de los demás sindicatos.</div>
+</section>
+
+<section id="escrito">
+<h2>Escrito a presentar — borrador completo</h2>
+<p class="lead2">Demanda / promoción ante el Tribunal de Conciliación y Arbitraje del Poder Judicial del Estado de Veracruz, en doble vía. Es un borrador listo para completar: todo lo que falta está marcado en <span class="ph">[CORCHETES]</span>. No lo presentes sin llenarlos, sin cotejar la CGT depositada y sin verificar los registros en el Semanario.</p>
+<div class="toolbar">
+<button class="btn" id="copiarEscrito" type="button">Copiar el escrito</button>
+<button class="btn" id="descargarEscrito" type="button">Descargar como .txt</button>
+<span class="small" id="escritoMsg" role="status"></span>
+</div>
+<h3 style="margin:18px 0 10px">Datos que faltan para poder presentarlo</h3>
+<ul class="datos">
+<li><b>Trabajador individual:</b> nombre completo, categoría y nombramiento de base, adscripción, domicilio para notificaciones y firma.</li>
+<li><b>Hijo/a beneficiario/a:</b> nombre, escuela, grado y constancia con promedio — debe acreditar promedio igual o mayor a 8.0.</li>
+<li><b>Por cada sindicato sin registro:</b> denominación, nombre de quien firma y con qué carácter, acta constitutiva, padrón de agremiados de base y, en su caso, constancia de solicitud de registro en trámite.</li>
+<li><b>Documentos del caso:</b> CGT 2026 depositada — texto del art. 78 —, memorándum de Recursos Humanos con acuse, convocatoria y lista de beneficiarios / reparto por cupos, si ya existe.</li>
+</ul>
+
+<article class="escrito" id="escritoTexto">
+<p class="rubro">Asunto: Demanda en doble vía — defensa de sindicatos sin registro y, en subsidio, defensa individual de trabajador de base.<br>Prestación: becas del art. 78, Condiciones Generales de Trabajo 2026.<br>Expediente: <span class="ph">[POR ASIGNAR]</span></p>
+<h3 class="centro">Tribunal de Conciliación y Arbitraje del Poder Judicial del Estado de Veracruz<br>Presente</h3>
+<p><span class="ph">[NOMBRE DE QUIEN FIRMA POR EL SINDICATO SIN REGISTRO 1]</span>, en mi carácter de <span class="ph">[SECRETARIO GENERAL / REPRESENTANTE]</span> de <span class="ph">[DENOMINACIÓN DEL SINDICATO SIN REGISTRO 1]</span>, y <span class="ph">[NOMBRE DE QUIEN FIRMA POR EL SINDICATO SIN REGISTRO 2, EN SU CASO]</span>, por <span class="ph">[DENOMINACIÓN DEL SINDICATO SIN REGISTRO 2]</span>; y, en lo individual y por derecho propio, <span class="ph">[NOMBRE COMPLETO DEL TRABAJADOR]</span>, trabajador de base del H. Ayuntamiento de Córdoba, Veracruz, con nombramiento <span class="ph">[NÚMERO / FECHA / CATEGORÍA]</span> y adscripción en <span class="ph">[ÁREA]</span>; señalando como domicilio para oír y recibir notificaciones <span class="ph">[DOMICILIO EN XALAPA O AUTORIZADO]</span> y autorizando para tal efecto a <span class="ph">[NOMBRES]</span>, ante Usted, con respeto, comparecemos y exponemos:</p>
+<p>Que venimos a demandar al <b>H. Ayuntamiento de Córdoba, Veracruz</b>, por conducto de su representante legal <span class="ph">[PRESIDENTE MUNICIPAL / SÍNDICO — VERIFICAR REPRESENTACIÓN VIGENTE]</span>, con domicilio en <span class="ph">[DOMICILIO OFICIAL]</span>, el cumplimiento de las prestaciones y declaraciones que se precisan, en doble vía: <b>principal, en defensa de los sindicatos sin registro aquí comparecientes y de sus agremiados de base; y subsidiaria y autónoma, en defensa individual del trabajador de base compareciente</b>, para el caso de que este Tribunal estime que los sindicatos comparecientes carecen de personería o de registro para reclamar en forma colectiva.</p>
+<h3>I. Pretensiones</h3>
+<ol>
+<li><b>Que no se suspenda la dispersión</b> de las becas del art. 78 de las Condiciones Generales de Trabajo 2026 y que, mientras se resuelve este juicio, no se excluya de ella a los trabajadores de base agremiados a los sindicatos sin registro comparecientes, ni al actor individual, por el solo hecho de la falta de afiliación a CROC, CTM, CROM o UEMAC o de la falta de toma de nota de su organización.</li>
+<li><b>La inaplicación, en el caso concreto</b> — no la modificación ni reescritura de su texto —, del memorándum de Recursos Humanos y de toda interpretación del art. 78 que limite las becas a “hijos de empleados sindicalizados” o las reparta por cupos entre organizaciones sindicales, por contravenir los artículos 1 y 123, apartado B, fracción X, constitucionales y el artículo 137 de la Ley Estatal del Servicio Civil de Veracruz.</li>
+<li><b>La conformación de una lista única</b> de aspirantes, integrada por todos los trabajadores de base que cumplan los requisitos objetivos de la propia Condición — promedio igual o mayor a 8.0, rotación y lista de espera —, sin listas separadas por sindicato.</li>
+<li><b>En la vía individual subsidiaria:</b> el otorgamiento al actor de la beca correspondiente a su hijo/a <span class="ph">[NOMBRE DEL HIJO/A]</span>, alumno/a de <span class="ph">[ESCUELA Y GRADO]</span>, con promedio de <span class="ph">[PROMEDIO]</span>, o, si el número de becas estuviere agotado conforme a la lista única correctamente integrada, su inclusión en la lista de espera con el lugar que por promedio y rotación le corresponda, así como el pago de las cantidades devengadas desde que la beca fue exigible, en la cantidad que prevea el art. 78 <span class="ph">[MONTO — VERIFICAR EN LA CGT DEPOSITADA]</span>.</li>
+<li>La exhibición por el demandado de la Condición General depositada, del memorándum impugnado, de la convocatoria, de las solicitudes recibidas y de las listas de beneficiarios y de reparto por organización sindical.</li>
+</ol>
+<h3>II. Hechos</h3>
+<ol>
+<li>El actor individual es trabajador de <b>base</b> del Ayuntamiento de Córdoba, conforme al nombramiento que se acompaña. No es trabajador de confianza.</li>
+<li>Los sindicatos comparecientes agrupan a trabajadores de base del mismo Ayuntamiento. Carecen de registro / toma de nota <span class="ph">[PRECISAR: NUNCA SOLICITADO / EN TRÁMITE DESDE FECHA / NEGADO — ACREDITAR CON ACTA CONSTITUTIVA, PADRÓN Y CONSTANCIAS]</span>. Esa circunstancia registral es el único motivo por el que se les pretende dejar fuera del reparto.</li>
+<li>El artículo 78 de las Condiciones Generales de Trabajo 2026 prevé becas para hijos de trabajadores — hasta 115 becas, con promedio mínimo de 8.0, rotación y lista de espera — <span class="ph">[TRANSCRIBIR EL TEXTO LITERAL DEL ART. 78 SEGÚN LA CGT DEPOSITADA, ARTS. 138–139 LESCV]</span>.</li>
+<li>Por memorándum de Recursos Humanos de fecha <span class="ph">[FECHA]</span>, la convocatoria se limitó a “hijos de empleados sindicalizados” y el reparto se hizo / se pretende hacer por cupos entre CROC, CTM, CROM y UEMAC, con lo que quedaron excluidos los no afiliados, los agremiados a sindicatos sin registro y, con ello, el actor y su hijo/a, pese a cumplir el requisito de promedio.</li>
+<li>Con fecha <span class="ph">[FECHA]</span> se presentó petición escrita al Ayuntamiento solicitando la inclusión en la lista única <span class="ph">[ACUSE — PRECISAR SI HUBO RESPUESTA O SI PERSISTE LA OMISIÓN, ART. 8 CONSTITUCIONAL]</span>. La demanda se presenta dentro del año de prescripción contado desde la exigibilidad — publicación de la lista de beneficiarios / negativa expresa —, artículos 100 y 101 de la Ley Estatal del Servicio Civil, y su sola presentación la interrumpe, artículo 105 de la misma ley.</li>
+</ol>
+<h3>III. Derecho — vía colectiva: sindicatos sin registro</h3>
+<p>La libertad sindical comprende el derecho a constituir sindicatos y a afiliarse a ellos — aspecto positivo y colectivo — y también a no afiliarse — aspecto negativo —, conforme a los artículos 1 y 123, apartado B, fracción X, constitucionales y a la jurisprudencia <b>P./J. 43/99, registro 193868</b>, según la cual la sindicación única viola esa libertad. Excluir de una prestación a toda una organización, y a sus agremiados, por una circunstancia registral, sin examinar si son trabajadores de base que cumplen los requisitos objetivos de la Condición, convierte un requisito de forma en un filtro de fondo.</p>
+<p>El privilegio admisible del sindicato mayoritario o más representativo es <b>negociar</b>, no monopolizar trámites ni apropiarse de las prestaciones: <b>2a. I/2012, registro 160288</b>, y <b>2a. IV/2012, registro 160295</b> — viola la libertad sindical la cláusula que reserva en exclusiva al mayoritario los trámites administrativos de los trabajadores ante el patrón. En el mismo sentido, la jurisprudencia <b>PR.P.T.CS. J/16 L (12a.), registro 2032404</b>, obligatoria en este Circuito, reconoce la extensión de beneficios a sindicatos minoritarios conforme a igualdad y pluralidad sindical. Se invoca como contexto de pluralidad, con una precisión: los comparecientes no piden un cupo proporcional para su organización; piden que la afiliación — a cualquier sindicato, registrado o en vías de registro — no sea requisito de una prestación de base, y que la dispersión no se suspenda en su perjuicio mientras se define su situación registral.</p>
+<p>Se reconoce expresamente que esta vía enfrenta la objeción de personería por falta de registro. Por ello se plantea en primer término la protección urgente — no suspensión ni exclusión — y, en subsidio, la vía individual siguiente, que no depende de que esta prospere.</p>
+<h3>IV. Derecho — vía individual subsidiaria y autónoma</h3>
+<p>El artículo 137 de la Ley Estatal del Servicio Civil de Veracruz dispone: “Las Condiciones Generales de Trabajo se extienden a todos los trabajadores que ampara esta Ley, que laboren para la misma Entidad Pública aunque no pertenezcan al Sindicato.” La jurisprudencia obligatoria en este Circuito, <b>PC.VII.L. J/2 L (10a.), registro 2009608</b>, interpreta ese precepto excluyendo únicamente a los trabajadores de confianza, artículo 11, fracción I, de la misma ley. El actor es de base: está, por tanto, dentro de la extensión.</p>
+<p>La jurisprudencia <b>PC.I.L. J/40 L (10a.), registro 2017733</b> — del Primer Circuito, que se invoca como criterio persuasivo en Veracruz — sostiene que las Condiciones Generales son aplicables a todos los trabajadores de base, independientemente de que se encuentren afiliados o no al sindicato mayoritario, y que la disposición que restrinja su aplicación a los afiliados <b>debe inaplicarse</b> por contravenir la libertad sindical. Conforme al precedente del Pleno de la Suprema Corte en el <b>ADR 3667/2025, resuelto el 10 de febrero de 2026</b>, lo que se pide es exactamente eso: <b>inaplicación en el caso concreto, no modificación ni reescritura</b> de la Condición ni del memorándum.</p>
+<p>No se impugna la toma de nota ni la representatividad de CROC, CTM, CROM o UEMAC, pretensión para la que el trabajador en lo individual carece de interés legítimo, <b>2a./J. 50/2024 (11a.), registro 2028954</b>. Se combate únicamente la exclusión del actor.</p>
+<h3>V. Carga de la prueba y exhibición</h3>
+<p>El actor acredita: (i) su calidad de trabajador de base, con su nombramiento; (ii) la existencia y contenido de la prestación, con la Condición depositada, cuyo texto se pide exhiba el demandado si no se acompaña; y (iii) el cumplimiento del requisito objetivo, con la constancia de estudios y promedio de su hijo/a. Si el Ayuntamiento reconoce — como lo hace el propio memorándum — que las becas existen y se pagan a trabajadores sindicalizados, le corresponde demostrar que el actor no se encuentra en los supuestos para percibirla, conforme a <b>I.5o.T. J/5 L (11a.), registro 2025844</b>, que se invoca como persuasiva en este Circuito, frente a la regla general de <b>2a./J. 9/2022 (11a.), registro 2024328</b>. Si se alega agotamiento de las 115 becas, deberá acreditarse con la lista única ordenada por promedio y rotación, no con listas separadas por sindicato.</p>
+<h3>VI. Pruebas que se ofrecen</h3>
+<ul>
+<li><b>Documentales:</b> nombramiento de base del actor; acta constitutiva y padrón de cada sindicato sin registro compareciente y, en su caso, constancias de su solicitud de registro; Condiciones Generales de Trabajo 2026 depositadas, art. 78; memorándum de Recursos Humanos y convocatoria; petición escrita con acuse; constancia de estudios y promedio del hijo/a; listas de beneficiarios y de reparto por cupos, cuya exhibición se pide al demandado.</li>
+<li><b>Confesional / posiciones</b> y demás que resulten procedentes, que se detallarán en la audiencia correspondiente <span class="ph">[COMPLETAR SEGÚN LA ETAPA PROCESAL Y EL TEXTO VIGENTE DE LA LEY ESTATAL DEL SERVICIO CIVIL]</span>.</li>
+</ul>
+<h3>VII. Puntos petitorios</h3>
+<p>Por lo expuesto y fundado, a este Tribunal atentamente pedimos:</p>
+<ol>
+<li>Se nos tenga por presentados en tiempo y forma, demandando en doble vía — colectiva, por los sindicatos sin registro, e individual subsidiaria — al H. Ayuntamiento de Córdoba, Veracruz.</li>
+<li>Se ordene que no se suspenda la dispersión de las becas del art. 78 ni se excluya de ella a los comparecientes por falta de afiliación o de toma de nota, mientras se resuelve el juicio.</li>
+<li>Se requiera al demandado la exhibición de la Condición depositada, el memorándum, la convocatoria y las listas de beneficiarios y de reparto.</li>
+<li>En su oportunidad, se dicte laudo que declare la inaplicación en el caso concreto de la restricción impugnada, ordene la integración de la lista única por criterios objetivos y condene al otorgamiento de la beca al actor — o a su inclusión en lista de espera con el lugar que le corresponda — y al pago de las cantidades devengadas.</li>
+<li>En caso de que se niegue personería a los sindicatos sin registro, se resuelva en todo caso la pretensión individual subsidiaria, que es autónoma.</li>
+</ol>
+<p>Protestamos lo necesario.</p>
+<p>Xalapa-Enríquez, Veracruz, a <span class="ph">[DÍA]</span> de <span class="ph">[MES]</span> de 2026.</p>
+<p><span class="ph">[FIRMA Y NOMBRE — REPRESENTANTE DEL SINDICATO SIN REGISTRO 1]</span><br><span class="ph">[FIRMA Y NOMBRE — REPRESENTANTE DEL SINDICATO SIN REGISTRO 2, EN SU CASO]</span><br><span class="ph">[FIRMA Y NOMBRE — TRABAJADOR DE BASE, ACTOR INDIVIDUAL]</span></p>
+</article>
+<p class="small" style="margin-top:12px">Antes de firmar: coteja en el buscador del Semanario cada registro citado — en especial P./J. 43/99, donde una fuente secundaria cita 193869 en lugar de 193868 —, transcribe el art. 78 desde la CGT depositada y verifica la representación legal del Ayuntamiento y el régimen registral sindical en la LESCV vigente. El informe no verificó en línea el texto del art. 78, el memorándum, el monto de la beca ni el régimen de registro sindical.</p>
+</section>
+
+<section id="tesis">
+<h2>1 · Tesis citadas en el caso — verificadas</h2>
+<p class="lead2">Las 12 tesis de las tarjetas siguientes existen y están verificadas en el informe. Filtra por obligatoriedad en el Séptimo Circuito / Veracruz o busca por número de tesis o registro digital.</p>
+<div class="controls">
+<input id="q" type="search" placeholder="Buscar: 2017733, libertad sindical, cuotas…" aria-label="Buscar tesis">
+<button class="btn active" data-f="all">Todas</button>
+<button class="btn" data-f="yes">Obligatorias en Séptimo</button>
+<button class="btn" data-f="no">Persuasivas</button>
+<button class="btn" data-f="warn">Con advertencia</button>
+</div>
+<p class="small" id="count"></p>
+<div class="tesis-grid" id="tesisGrid"></div>
+
+<div class="grid2" style="margin-top:16px">
+<article class="card"><h3>Nota — Registro de P./J. 43/99</h3><p>La mayoría de fuentes (SciELO, vLex) citan <b>193868</b>; una fuente secundaria (material UNAM reproducido en 1library) cita <b>193869</b> para la misma tesis. Es una discrepancia de un dígito en fuente secundaria, no una inexistencia: la tesis se identifica por número P./J. 43/99, Tomo IX, mayo 1999, p. 5. Verificar el registro en el buscador del SJF antes de estamparlo en la demanda.</p></article>
+<article class="card"><h3>Serie 2012 — qué sí y qué no puede hacer el mayoritario</h3><p>Lo admisible es <b>negociar</b> el CCT/CGT (2a. II/2012, reg. 160290; 2a. I/2012, reg. 160288: negociar, prioridad en consultas y en delegados internacionales). Lo inadmisible es extender la exclusividad a <b>trámites administrativos</b> (2a. IV/2012), a <b>proponer personas para horas vacantes</b> (2a. V/2012, reg. 160293) y a <b>integrar en exclusiva las comisiones mixtas</b> (2a. VI/2012). La beca tramitada “por medio del Sindicato” encaja en el grupo prohibido (trámite), no en la negociación.</p></article>
+</div>
+<div class="quote"><p style="font-size:16px">“Cabe resaltar que en caso de que las condiciones aludidas contengan alguna disposición que restrinja su aplicación a los trabajadores de base, a que se encuentren afiliados únicamente al sindicato mayoritario para gozar de los beneficios y prerrogativas contenidos en ese ordenamiento legal, <b>debe inaplicarse</b>, toda vez que contraviene el derecho a la libertad sindical citado.”</p><cite>Texto de PC.I.L. J/40 L (10a.), reg. 2017733. Fundamento: interpretación sistemática de arts. 67, 69, 70, 87 y 88 LFTSE, y arts. 1 y 123-B-X CPEUM.</cite></div>
+<article class="card"><h3>Base legal conexa — LESCV</h3><p><b>Art. 135:</b> revisión de CGT cuando menos cada 2 años, tomando en cuenta la opinión del Sindicato y a petición de éste. <b>Art. 136:</b> contenido, incl. IV. prestaciones que se otorguen a los trabajadores. <b>Art. 138:</b> por escrito, triplicado, depósito en el Tribunal. <b>Art. 139:</b> efectos desde el depósito. <b>Art. 11-I:</b> excluidos de la ley, los trabajadores de confianza. <b>Art. 1:</b> ámbito incluye municipios. <b>Arts. 6 y 10:</b> clasificación base/confianza; trabajadores de base definitivos o temporales.</p></article>
+</section>
+
+<section id="criterios">
+<h2>2 · Criterios adicionales a nivel nacional</h2>
+<p class="lead2">Criterios nuevos localizados en SCJN, Plenos Regionales y Tribunales Colegiados, con su obligatoriedad y relevancia concreta para Córdoba.</p>
+<div class="tesis-grid" id="nuevosGrid"></div>
+
+<h3 style="margin:22px 0 10px">Lectura por tema</h3>
+<div class="grid2">
+<article class="card"><h3>a) CGT que se extienden a no afiliados</h3><p>Criterio rector: PC.I.L. J/40 L (2017733), reforzado por I.6o.T.455 L e I.9o.T.58 L, y por el criterio de la Segunda Sala en el amparo del Sindicato de Trabajadores de la Cámara de Senadores (laudo TFCA 4381/2008): las estipulaciones se extienden a todas las personas que trabajen en la empresa o establecimiento, aunque no sean miembros del mayoritario, con fundamento en el art. 396 LFT supletorio. En Veracruz la base es más fuerte: el art. 137 LESCV lo dice expresamente y PC.VII.L. J/2 L lo confirma por exclusión de los de confianza.</p></article>
+<article class="card"><h3>b) Becas / estímulos — vacío expreso</h3><p><b>No se localizó tesis o jurisprudencia federal específica sobre becas para hijos en CGT burocráticas.</b> Lo más cercano, por analogía: I.16o.T.4 L / 5 L (incentivos, estímulos o recompensas por evaluación no exclusivos del mayoritario — la beca por promedio es un estímulo por criterio objetivo de mérito) y PR.P.T.CS. J/16 L (extensión proporcional de comisiones). <b>TFCA:</b> no se localizó criterio publicado sobre becas; el TFCA no genera tesis en el SJF como los TCC.</p><p><b>Aplicación real en 2026:</b> el Tribunal laboral de Colima aplicó PC.I.L. J/40 L en enero y marzo de 2026 (exp. 27/2021 y 458/2019, Ayuntamiento de Manzanillo) para reconocer a una trabajadora de base <b>todas las prestaciones</b> del convenio/CGT por el solo hecho de ser de base. No son jurisprudencia, pero muestran aplicación vigente en tribunales burocráticos municipales.</p></article>
+<article class="card"><h3>c) Libertad sindical negativa</h3><p>P./J. 43/99: la libertad sindical tiene aspecto positivo (afiliarse/constituir), <b>negativo (no afiliarse)</b> y colectivo; la sindicación única la viola. 2a./J. 8/2021 (10a.): la negativa al descuento de cuotas no contraviene libertad/autonomía sindical — por analogía, no afiliarse no puede acarrear pérdida de prestaciones. I.14o.T.44 L: ni las licencias para comisiones de minoritarios pueden condicionarse a la preferencia del mayoritario.</p></article>
+<article class="card"><h3>e) “Por medio del Sindicato”: trámite vs. filtro</h3><p><b>Trámite admisible:</b> que la solicitud se presente, turne o gestione con intervención del sindicato para verificar requisitos o integrar la lista. <b>Filtro exclusivo inadmisible:</b> que solo se admitan solicitudes canalizadas por un sindicato o solo de afiliados — 2a. IV/2012 (160295). El memorándum que dice “solo hijos de empleados sindicalizados” convierte el trámite en filtro. Si el art. 78 dice literalmente “por medio del Sindicato”, la interpretación conforme es leerlo como canal de gestión; si no admite esa lectura, la cláusula debe <b>inaplicarse</b> (PC.I.L. J/40 L), sin reescribirla (ADR 3667/2025).</p></article>
+</div>
+
+<h3 style="margin:22px 0 10px">Los dos modelos — no son intercambiables</h3>
+<div class="compare">
+<article class="card"><h3>✓ Modelo del caso: lista única</h3><p><b>PC.I.L. J/40 L + art. 137 LESCV.</b> El derecho nace de ser trabajador de base. La asignación se hace por los criterios objetivos de la propia CGT — promedio 8.0, rotación, lista de espera — en <b>una sola lista</b>. No hay cupo sindical que repartir.</p><p>El actor no debe pedir “su parte” de un cupo: debe pedir la <b>inclusión en la lista única</b>. Si el Ayuntamiento alega agotamiento de las 115 becas, debe acreditarlo con la lista única ordenada por promedio/rotación, no con listas separadas por sindicato.</p></article>
+<article class="card"><h3>Modelo colectivo: reparto proporcional</h3><p><b>PR.P.T.CS. J/16 L, reg. 2032404.</b> Cuando el beneficio es <b>para el sindicato como organización</b> (comisiones, licencias), se extiende a los minoritarios <b>en proporción a su afiliación</b>, por divisibilidad, razonabilidad y proporcionalidad.</p><p>El Ayuntamiento no puede usarlo para justificar cupos frente a un no afiliado: ese criterio presupone afiliación a <i>algún</i> sindicato y reparte entre organizaciones; el actor queda fuera de todo reparto proporcional precisamente por no estar afiliado.</p></article>
+</div>
+</section>
+
+<section id="laboral">
+<h2>3 · Vía laboral — la vía principal</h2>
+<p class="lead2">Juicio ante el Tribunal de Conciliación y Arbitraje del Poder Judicial del Estado de Veracruz.</p>
+<div class="grid2">
+<article class="card"><h3>Competencia</h3><p><b>Tribunal de Conciliación y Arbitraje del Poder Judicial del Estado de Veracruz</b> (antes TECA), sede oficial <b>Xalapa-Enríquez</b>. Ley Orgánica del Poder Judicial del Estado de Veracruz, <b>Ley 231</b>, Gaceta Oficial 29-ene-2025. Su competencia incluye resolver controversias entre la administración pública estatal o <b>municipal</b> y sus empleados, y registrar las CGT. Entró en funciones con nueva integración el 1-sep-2025; magistrados 2025–2027: Claudia Ocampo García, Humberto Oliverio Hernández Reducindo y Luz María López Aburto (presidenta).</p><p>No es competente la Junta Local ni un Tribunal Laboral federal (apartado B, arts. 115-VIII, 116-VI y 123-B CPEUM). Confirmación en el propio circuito: VII.2o.T.271 L (10a.), reg. 2021646.</p><p><b>Demandado:</b> Ayuntamiento de Córdoba como entidad pública/patrón. Verificar en la demanda quién ostenta la representación legal — presidente municipal / síndico — en el texto vigente; ese punto no fue verificado en la investigación.</p></article>
+<article class="card"><h3>Acción que procede — demanda individual</h3><p>Acciones acumuladas, por derecho propio (no es acción colectiva ni de titularidad sindical):</p><ol style="font-size:14.5px;color:var(--ink2);padding-left:18px"><li><b>Reclamación / cumplimiento de prestación extralegal</b> del art. 78 CGT 2026: otorgamiento de la beca conforme a promedio, rotación y lista de espera; pago de cantidades devengadas desde que fue exigible.</li><li><b>Inaplicación de la cláusula restrictiva</b> (memorándum y/o interpretación excluyente del art. 78) por contravenir arts. 1 y 123-B-X CPEUM y art. 137 LESCV. Pedir <b>inaplicación en el caso concreto, no modificación del texto</b> (ADR 3667/2025).</li><li>En su caso, <b>nulidad / ineficacia del reparto por cupos</b> en lo que afecta al actor, con reordenamiento de la lista única.</li></ol><p>La Procuraduría para la Defensa de los Trabajadores (art. 180 LESCV) representa o asesora gratuitamente a quien lo solicite ante el Tribunal.</p><p><b>Efectos de la condena:</b> si se acredita derecho y lugar en la lista, condena a otorgar la beca (en especie o en cantidad líquida según prevea el art. 78 — monto no verificado) y pago retroactivo. Si el número se agotó por lista única correctamente ordenada, la pretensión se reduce a inclusión en lista de espera con rotación.</p></article>
+</div>
+<div class="grid2" style="margin-top:12px">
+<article class="card"><h3>Carga de la prueba</h3><p><b>Actor:</b> (i) calidad de trabajador de base (nombramiento); (ii) existencia y contenido de la prestación (CGT art. 78 depositada, arts. 138–139 LESCV; si el Ayuntamiento no la exhibe, pedir exhibición); (iii) que el hijo cumple requisitos objetivos (promedio ≥ 8.0, constancia de estudios).</p><p><b>Regla general:</b> corresponde al trabajador demostrar la procedencia de las extralegales — <b>2a./J. 9/2022 (11a.), reg. 2024328</b> — incluso si el demandado no contesta ni comparece. Es tesis de apartado A; el principio se invoca en lo burocrático.</p><p><b>Inversión:</b> si el Ayuntamiento <b>reconoce que las becas existen y se pagan</b> a sindicalizados, corresponde al patrón demostrar que el actor no estaba en los supuestos — <b>I.5o.T. J/5 L (11a.), reg. 2025844</b> (persuasiva en Séptimo). En la práctica, el memorándum y las listas de beneficiarios son la mejor prueba del actor. La supletoriedad de la LFT no es automática (reg. 2022490).</p></article>
+<article class="card"><h3>Prescripción — 1 año</h3><p><b>Art. 100 LESCV:</b> las acciones que nazcan de la Ley, del nombramiento y de los acuerdos que fijen las CGT prescriben en <b>un año</b>, salvo excepciones. <b>Art. 101:</b> un año desde que la obligación es exigible; excepciones de un mes y de dos meses para supuestos distintos (nulidad de nombramiento, reocupación, separación, disciplina, reinstalación/indemnización). <b>Art. 102:</b> dos años (incapacidad por riesgo, dependientes, ejecutar resoluciones). <b>Art. 105:</b> se interrumpe por la sola presentación de la demanda o por reconocimiento indubitable del derecho. <b>Art. 106:</b> meses por días naturales.</p><p>Cada convocatoria/ciclo genera una obligación exigible propia; el año corre desde que la beca debió otorgarse (lista de beneficiarios o pago a sindicalizados) o desde la negativa expresa. La petición escrita por sí sola no interrumpe, salvo reconocimiento indubitable.</p><p><b>No se localizó en los arts. 100–101 un plazo de seis meses</b> aplicable a esta acción; si se alude a seis meses, debe precisarse su fuente. Equivalentes solo comparativos: LFT art. 516 y LFTSE art. 113 (ambos, 1 año).</p></article>
+</div>
+<p class="small" style="margin-top:12px">Procedimiento (verificar números en el texto vigente antes de demandar): demanda por escrito ante el Tribunal/Sala, con actor, demandado, acciones, hechos y fundamentos; el Tribunal fija audiencia de conciliación, demanda y excepciones, ofrecimiento y admisión de pruebas dentro de los 15 días siguientes al recibo, notificando con al menos 10 días de anticipación. La Ley 834 de Medios Alternativos de Veracruz prevé remisión al Centro Estatal de Justicia Alternativa — verificar su aplicación práctica en 2026; no es la conciliación prejudicial federal, que no aplica al apartado B. Estas referencias proceden de material didáctico (INVEDEN) y deben cotejarse con la LESCV actualizada al 7-oct-2026.</p>
+<p class="small"><b>Precedentes burocráticos sobre becas:</b> no se localizó jurisprudencia federal sobre becas para hijos en CGT burocráticas. El precedente más próximo es Colima 2026 (ver §2b). TFCA: sin criterio publicado localizado sobre becas.</p>
+</section>
+
+<section id="amparo">
+<h2>4 · Vía de amparo — alcances y límites</h2>
+<p class="lead2">La distinción decisiva: cuándo el Ayuntamiento actúa como patrón (coordinación) y cuándo como autoridad (supra-subordinación).</p>
+<div class="compare">
+<article class="card"><h3>Como patrón — no hay amparo por impago</h3><p>Cuando incumple u omite el pago de prestaciones laborales hay relación de <b>coordinación</b>, sin imperio: no es acto de autoridad — <b>III.4o.T. J/3 (10a.), reg. 2011298</b>. El medio idóneo es el juicio laboral. No promover amparo indirecto solo por el no pago de la beca.</p></article>
+<article class="card"><h3>Como autoridad — zona gris del memorándum</h3><p>Cuando emite actos unilaterales, generales e imperativos que crean, modifican o extinguen situaciones jurídicas sin consenso del afectado. El memorándum de RH está en la frontera: si es gestión patronal interna, no hay amparo; si fija unilateralmente quiénes pueden concursar, podría impugnarse en amparo indirecto. <b>No se localizó tesis que resuelva ese matiz para un memorándum de becas</b>: es el principal riesgo de improcedencia (art. 61-I, Ley de Amparo, si se niega el carácter de autoridad).</p></article>
+</div>
+<div class="grid2" style="margin-top:12px">
+<article class="card"><h3>Amparo indirecto</h3><p><b>Por omisión de responder petición (art. 8 CPEUM):</b> procedente ante Juez de Distrito. Subgarantías: respuesta por escrito, congruente, en breve término y darla a conocer — VI.1o.A. J/54 (9a.), reg. 160206. <b>No hay plazo fijo de cuatro meses:</b> el Juez califica el “breve término” en cada caso (I.7o.A.112 K). <b>Efecto limitado:</b> solo obliga a responder, no a conceder la beca. Utilidad: fijar fecha de negativa/exigibilidad y documentar la omisión.</p><p><b>Contra el memorándum</b> (si se admite como acto de autoridad): plazo <b>15 días hábiles</b> (arts. 17–18, Ley de Amparo), ante Juez de Distrito donde deba ejecutarse el acto — en Córdoba existen Juzgados de Distrito con sede en Córdoba (en 2018, el Decimosexto; <b>verificar número y materia por turno en 2026</b>, no se afirma un número concreto). Puede pedirse inaplicación en el caso concreto; no reescritura de la CGT.</p><p><b>Interés:</b> el trabajador tiene <b>interés jurídico</b> para reclamar su beca (art. 137 LESCV + art. 78 CGT; marco P./J. 50/2014, reg. 2007921). No necesita interés legítimo.</p></article>
+<article class="card"><h3>Amparo directo + qué no impugnar</h3><p><b>Directo:</b> contra el laudo que ponga fin al juicio (art. 170-I, Ley de Amparo), ante el <b>TCC en Materia de Trabajo del Séptimo Circuito</b> (Xalapa), plazo <b>15 días hábiles</b>, demanda ante la propia autoridad responsable (art. 178). Ahí sí puede plantearse la inconstitucionalidad de la cláusula aplicada y pedirse su inaplicación — vía que contempla I.16o.T.4 L — pero tras ADR 3667/2025 solo <b>inaplicación, no modificación</b>. Revisión ante la SCJN solo si subsiste problema de constitucionalidad (art. 107-IX CPEUM; arts. 81-II y 83, Ley de Amparo).</p><p style="background:var(--red-bg);padding:12px;border-radius:10px"><b>No impugnar la toma de nota:</b> el trabajador en lo individual <b>carece de interés legítimo</b> para impugnar en amparo indirecto la toma de nota de una directiva sindical — <b>2a./J. 50/2024 (11a.), reg. 2028954</b>. Es un acto entre sindicato y autoridad registral. Acumular esa pretensión contamina la demanda de becas y da pie a improcedencia parcial. Cuestionar la representatividad de CROC/CTM/CROM/UEMAC corresponde, en su caso, al procedimiento registral/sindical ante el Tribunal, no al amparo individual.</p></article>
+</div>
+</section>
+
+<section id="estrategia">
+<h2>Estrategia procesal recomendada</h2>
+<div class="steps">
+<div class="step"><span>Paso 1 · Urgente</span><h3 style="margin:6px 0">No suspensión</h3><p>Presentar el escrito en doble vía y pedir que no se suspenda la dispersión ni se excluya a sindicatos sin registro ni al actor mientras se resuelve. Acreditar acta constitutiva, padrón y registro en trámite, si lo hay.</p></div>
+<div class="step"><span>Paso 2 · Principal</span><h3 style="margin:6px 0">Vía colectiva</h3><p>Defensa de los sindicatos sin registro: pluralidad y libertad sindical (P./J. 43/99; contexto PR.P.T.CS. J/16 L). Asumir la objeción de personería como el riesgo central.</p></div>
+<div class="step"><span>Paso 3 · Subsidiaria</span><h3 style="margin:6px 0">Vía individual</h3><p>Si la colectiva cae, el trabajador de base reclama por derecho propio: art. 137 LESCV + lista única. Interrumpir la prescripción de 1 año con la demanda (art. 105 LESCV). En paralelo, petición escrita art. 8.</p></div>
+<div class="step"><span>Paso 4 · Si el laudo es desfavorable</span><h3 style="margin:6px 0">Amparo directo</h3><p>Ante el TCC de Trabajo del Séptimo Circuito, invocando PC.VII.L. J/2 L (obligatoria), P./J. 43/99 y 2a./J. 50/2024 (nacionales), y PC.I.L. J/40 L + PR.P.T.CS. J/16 L según corresponda. Nunca impugnar la toma de nota ajena como individuo.</p></div>
+</div>
+
+<h3 style="margin:26px 0 10px">Tendencia 2024–2026 y reforma judicial</h3>
+<div class="timeline">
+<div><b>15-sep-2024 — Reforma judicial (DOF)</b><p>SCJN de 11 a 9 ministros; se suprimen Primera y Segunda Sala; todo pasa al Pleno. Elección judicial 1-jun-2025.</p></div>
+<div><b>1-sep-2025 — Nueva Corte</b><p>Toma protesta la nueva Corte (presidente Hugo Aguilar Ortiz); inicia la Duodécima Época del SJF. La SCJN funciona solo en Pleno.</p></div>
+<div><b>10-feb-2026 — ADR 3667/2025</b><p>Pleno: tribunales laborales no pueden modificar/reescribir cláusulas de CCT/CGT; solo inaplicación en el caso concreto.</p></div>
+<div><b>2-jun-2026 — Reforma al art. 94 CPEUM</b><p>DOF vespertino, en vigor 3-jun-2026: la SCJN “funcionará en Pleno; también, con aprobación del Pleno, podrá funcionar en dos secciones”. Elección judicial de 2027 pospuesta al primer domingo de junio de 2028. Transitorio Quinto: legislación secundaria en 90 días. <b>A noviembre de 2026 no se verificó que las secciones estén instaladas ni la legislación secundaria</b> — “solo en Pleno” sigue siendo correcto en la práctica, pero ya no es imposibilidad constitucional.</p></div>
+<div><b>Jul-2026 — Primeras tesis de la 12a. Época</b><p>P./J. 169/2026 (12a.), reg. 2032419, y PR.P.T.CS. J/16 L (12a.), reg. 2032404, publicadas 10-jul-2026, obligatorias desde 13-jul-2026.</p></div>
+</div>
+<article class="card" style="margin-top:16px"><h3>¿Sigue vigente la jurisprudencia de las Salas extintas? Sí.</h3><p>La jurisprudencia de las extintas Salas <b>no se extingue</b> por su desaparición. Art. 94 CPEUM: las razones de sentencias del Pleno por mayoría de seis votos son obligatorias. Art. 217, Ley de Amparo: la jurisprudencia de la SCJN es obligatoria para todas las autoridades jurisdiccionales, con excepción de la propia SCJN; la de Plenos Regionales, para su región; la de TCC, para su circuito. Por tanto <b>P./J. 43/99, 2a./J. 186/2007, 2a./J. 9/2022 y 2a./J. 50/2024 siguen obligatorias</b>, y las aisladas de Segunda Sala de 2012 siguen persuasivas. La SCJN en Pleno puede interrumpirlas o sustituirlas (arts. 215–230, Ley de Amparo), sin constancia de que lo haya hecho con ninguna de las citadas a noviembre de 2026. La jurisprudencia de Plenos de Circuito (PC.VII.L. J/2 L, PC.I.L. J/40 L) tampoco caduca automáticamente.</p><p><b>Tendencia de fondo:</b> (1) extensión proporcional a minoritarios para beneficios de la organización; (2) límite a la intervención judicial en negociación colectiva (inaplicación sí, reescritura no); (3) sin tesis nueva 2024–2026 que supere a PC.I.L. J/40 L para no afiliados — el criterio de 2018 sigue rector y se aplica en tribunales locales (Colima, 2026). <b>Iniciativa de reforma a la Ley de Amparo (15-sep-2025):</b> propone acotar interés legítimo y limitar suspensión; <b>a noviembre de 2026 no se verificó su aprobación; no darla por vigente</b>.</p></article>
+</section>
+
+<section id="riesgos">
+<h2>Riesgos — defensas previsibles del Ayuntamiento</h2>
+<p class="lead2">Qué invocará, qué tan fuerte es y cómo se responde.</p>
+<div class="risk-grid" id="riskGrid"></div>
+</section>
+
+<section id="pendientes">
+<h2>Lo que no pudo verificarse — preguntas abiertas</h2>
+<p class="lead2">Nada de esto debe darse por probado en un escrito sin la comprobación indicada.</p>
+<ol class="openlist">
+<li><div><b>Texto del art. 78 CGT 2026 y del memorándum de RH</b> (115 becas, promedio 8.0, rotación, lista de espera, cupos CROC/CTM/CROM/UEMAC, monto): no localizado en línea. Obtener la CGT depositada (arts. 138–139 LESCV) y el memorándum con acuse. Sin ellos no puede confirmarse si la exclusión está en la CGT o solo en el memorándum — y eso cambia la acción.</div></li>
+<li><div><b>Régimen registral de los sindicatos sin registro y datos para firmar el escrito:</b> el informe no verificó los artículos de la LESCV sobre constitución, registro y toma de nota de sindicatos, ni los efectos de carecer de registro sobre la personería. Tampoco se tienen el nombre y datos del trabajador, de su hijo/a, ni quién firma por cada sindicato sin registro. Sin esos datos el escrito queda en borrador con espacios por completar.</div></li>
+<li><div><b>Números de artículo del procedimiento laboral en la LESCV vigente:</b> no verificados en el texto vigente; cotejar con la LESCV actualizada al 7-oct-2026 antes de demandar.</div></li>
+<li><div><b>Plazo de “seis meses”</b> aludido para prescripción: no localizado en arts. 100–101 LESCV; precisar su fuente o descartarlo.</div></li>
+<li><div><b>Registro de P./J. 43/99:</b> discrepancia 193868 (mayoría) vs. 193869 (una fuente secundaria). Verificar en el buscador del SJF.</div></li>
+<li><div><b>Tesis derivada del ADR 3667/2025:</b> no se localizó número de tesis ni registro; citar como precedente por expediente y fecha, no como tesis.</div></li>
+<li><div><b>Secciones de la SCJN (reforma 2-jun-2026):</b> no se verificó instalación ni legislación secundaria a noviembre de 2026.</div></li>
+<li><div><b>Juzgado de Distrito competente en Córdoba en 2026</b> (número y materia): no se afirma un número concreto; verificar por turno.</div></li>
+<li><div><b>Iniciativa de reforma a la Ley de Amparo (sep-2025):</b> no se verificó aprobación; no darla por vigente.</div></li>
+<li><div><b>Criterio específico sobre becas en CGT burocráticas y criterios del TFCA sobre becas:</b> no localizados; vacío expreso.</div></li>
+<li><div><b>Verificación directa en el SJF:</b> el navegador no abrió sjf.scjn.gob.mx; la verificación es por índice + espejos. Se recomienda comprobación final en el buscador del SJF por registro digital antes de presentar escritos.</div></li>
+</ol>
+</section>
+
+<section id="fuentes">
+<h2>Fuentes</h2>
+<p class="lead2">Portal SJF: <a href="https://sjf.scjn.gob.mx/">https://sjf.scjn.gob.mx/</a> · Detalle SJF2 de la tesis contendiente VII.2o.(IV Región) 1 L: <a href="https://sjf2.scjn.gob.mx/detalle/tesis/163254">https://sjf2.scjn.gob.mx/detalle/tesis/163254</a></p>
+<div class="grid2">
+<div><h3 style="font-size:15px">Tesis citadas (espejos / fuentes que las transcriben)</h3><ul class="sources">
+<li>PC.VII.L. J/2 L, 2009608: <a href="https://juristeca.com/mx/scjn/tesis-jurisprudenciales/2015/7/registro-2009608-trabajadores-de-confianza-al-servicio-del-estado-de-veracruz">Juristeca</a></li>
+<li>P./J. 43/99, 193868: <a href="https://www.scielo.org.mx/scielo.php?pid=S2448-51362020000100104&script=sci_arttext_plus&tlng=es">SciELO</a></li>
+<li>2a. I/2012, 160288: <a href="https://vlex.com.mx/vid/jurisprudencial-segunda-sala-aislada-362783090">vLex</a></li>
+<li>2a. IV/2012, 160295; V/2012, 160293; II/2012, 160290: <a href="https://www.fedessp.org/documentos-de-apoyo-sindical/tesis-de-jurisprudencia">FedESSP</a></li>
+<li>2a. VI/2012, 160292: <a href="https://altior-edunube.com/wp-content/uploads/2022/06/Lectura-10.pdf">Altior (PDF)</a></li>
+<li>PC.I.L. J/40 L, 2017733: <a href="https://parentesislegal.com/wp-content/uploads/CONDICIONES_GENERALES_DE_TRABAJO._SON_APLICABLES_A_TODOS_LOS_TRABAJADORES_DE_BASE_DE_LA_DEPENDENCIA_DE_QUE_SE_TRATE_INDEPENDIENTEMENTE_DE....pdf">Paréntesis Legal (PDF)</a></li>
+<li>I.16o.T.4 L, 2025651: <a href="https://juristeca.com/mx/scjn/tesis-aisladas/2022/12/registro-2025651-libertad-sindical">Juristeca</a></li>
+<li>2a./J. 50/2024, 2028954: <a href="https://jurisprudencia-mexico.tuabogadoenvivo.org/?p=188">Tu Abogado en Vivo</a></li>
+<li>2a./J. 8/2021 (10a.), 2022885: <a href="https://idconline.mx/laboral/2021/06/15/corte-palomea-aviso-de-no-descuento-de-cuotas-sindicales">IDC Online</a> · <a href="https://www.internet2.scjn.gob.mx/red2/comunicados/noticia.asp?id=6534">Comunicado SCJN</a></li>
+</ul></div>
+<div><h3 style="font-size:15px">Criterios nuevos, legislación y aplicación práctica</h3><ul class="sources">
+<li>PR.P.T.CS. J/16 L, 2032404: <a href="https://www.academiadeamparo.com/2026/07/clausula-251-pemex-comisiones.html">Academia de Amparo</a> · <a href="https://www.pyp-abogados.com.mx/25_Tesis_10_julio_2026.pdf">PyP Abogados (PDF, 10-jul-2026)</a></li>
+<li>ADR 3667/2025: <a href="https://idconline.mx/laboral/2026/02/25/scjn-determino-que-tribunales-laborales-no-pueden-modificar-clausulas-de-contratos-colectivos">IDC Online</a> · <a href="https://www2.scjn.gob.mx/Juridica/Engroses/Cerrados/Publico/Proyecto/2026/01/ADR3667_2025.pdf">Engrose SCJN (PDF)</a></li>
+<li>I.5o.T. J/5 L, 2025844: <a href="https://juristeca.com/mx/scjn/tesis-jurisprudenciales/2023/1/registro-2025844-carga-de-la-prueba-respecto-de-prestaciones-extralegales">Juristeca</a></li>
+<li>III.4o.T. J/3, 2011298: <a href="https://juristeca.com/mx/scjn/tesis-jurisprudenciales/2016/3/registro-2011298-autoridad-para-efectos-del-amparo">Juristeca</a></li>
+<li>Reg. 2022490 (supletoriedad LESCV): <a href="https://juristeca.com/mx/scjn/tesis-jurisprudenciales/2020/11/registro-2022490-supletoriedad-de-la-ley-federal-del-trabajo">Juristeca</a></li>
+<li>LESCV, Ley 364: <a href="http://www.cobaev.edu.mx/Marco_legal_documentos/100_Normatividad/152692734126.pdf">Texto consultado (PDF)</a></li>
+<li>Ley Orgánica PJ Veracruz, Ley 231: <a href="https://www.oplever.org.mx/wp-content/uploads/2025/Normatividad/Leyes/04_LEYORGANICAESTADOVERACRUZ_05032025.pdf">OPLE Veracruz (PDF)</a></li>
+<li>Acuerdo General 67/2022 (Plenos Regionales): <a href="https://sidofqa.segob.gob.mx/notas/docFuente/5676884">SEGOB / SIDOF</a></li>
+<li>Reforma judicial 2-jun-2026 (DOF): <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5789357&fecha=02/06/2026">DOF</a></li>
+<li>Ley de Amparo, art. 217: <a href="https://leyes.tuabogadoenvivo.org/articulo-217-ley-de-amparo/">Tu Abogado en Vivo</a></li>
+<li>Colima, exp. 27/2021: <a href="https://admiweb.col.gob.mx/archivos_prensa/banco_img/file_69d9689ba8c5a_EXP_LAB_27_2021.pdf">Resolución (PDF)</a> · Exp. 458/2019: <a href="https://admiweb.col.gob.mx/archivos_prensa/banco_img/file_6a481e5052929_EXP_LAB_458_2019_ACUM_582_2019.pdf">Resolución (PDF)</a></li>
+</ul></div>
+</div>
+<p class="small" style="margin-top:18px">Informe de investigación jurídica nacional (México), corte noviembre de 2026. Los hechos del caso de Córdoba fueron aportados en el contexto y no verificados en línea. Antes de presentar cualquier escrito, coteja registro digital y texto en el buscador del Semanario Judicial de la Federación y obtén la CGT depositada ante el Tribunal.</p>
+</section>
+</main>
+
+<script>
+var TESIS=[
+{code:"PC.VII.L. J/2 L (10a.)",rubro:"TRABAJADORES DE CONFIANZA AL SERVICIO DEL ESTADO DE VERACRUZ. NO LES SON APLICABLES LAS CONDICIONES GENERALES DE LOS TRABAJADORES DE BASE.",reg:"2009608",epoca:"10a.",inst:"Pleno en Materia de Trabajo del Séptimo Circuito",fecha:"Contradicción 1/2015, res. 2-jun-2015; publ. 10-jul-2015, oblig. 13-jul-2015. Gaceta Libro 20, jul-2015, Tomo II, p. 1406",tipo:"Jurisprudencia",oblig:"yes",vig:"Vigente",estado:"VERIFICADA",note:"Clave: arts. 137 y 11-I LESCV justifican el trato diferenciado base/confianza. La contendiente superada VII.2o.(IV Región) 1 L sostenía la lectura extensiva incluso a confianza."},
+{code:"P./J. 43/99",rubro:"SINDICACIÓN ÚNICA. LAS LEYES O ESTATUTOS QUE LA PREVÉN, VIOLAN LA LIBERTAD SINDICAL CONSAGRADA EN EL ARTÍCULO 123, APARTADO B, FRACCIÓN X, CONSTITUCIONAL.",reg:"193868",epoca:"9a.",inst:"Pleno SCJN",fecha:"SJF y su Gaceta, Tomo IX, may-1999, p. 5",tipo:"Jurisprudencia",oblig:"yes",vig:"Vigente",estado:"VERIFICADA",note:"Ver nota sobre discrepancia de registro 193868 / 193869 en fuente secundaria."},
+{code:"2a. I/2012 (9a.)",rubro:"LIBERTAD SINDICAL. PRIVILEGIOS ADMISIBLES EN FAVOR DEL SINDICATO MÁS REPRESENTATIVO O MAYORITARIO.",reg:"160288",epoca:"10a.",inst:"Segunda Sala SCJN",fecha:"ADR 303/2011, 24-ago-2011; publ. 1-feb-2012. Libro V, feb-2012, Tomo 2, p. 1697",tipo:"Tesis aislada",oblig:"no",vig:"Vigente como criterio persuasivo",estado:"VERIFICADA"},
+{code:"2a. IV/2012 (9a.)",rubro:"LIBERTAD SINDICAL. LA VIOLA LA CLÁUSULA DE UN CONTRATO COLECTIVO DE TRABAJO QUE PREVÉ LA FACULTAD EXCLUSIVA DEL SINDICATO MAYORITARIO DE LLEVAR A CABO TRÁMITES ADMINISTRATIVOS DE LOS TRABAJADORES ANTE EL PATRÓN, CUANDO SE TRATA DE CUESTIONES LABORALES.",reg:"160295",epoca:"10a.",inst:"Segunda Sala SCJN",fecha:"Libro V, feb-2012, Tomo 2, p. 1692",tipo:"Tesis aislada",oblig:"no",vig:"Vigente como criterio persuasivo",estado:"VERIFICADA"},
+{code:"2a. VI/2012 (9a.)",rubro:"LIBERTAD SINDICAL. LA VIOLA LA CLÁUSULA DE UN CONTRATO COLECTIVO DE TRABAJO QUE PREVÉ QUE LAS COMISIONES MIXTAS FORMADAS AL INTERIOR DE LA EMPRESA ESTARÁN SIEMPRE INTEGRADAS SÓLO POR REPRESENTANTES DEL SINDICATO MAYORITARIO.",reg:"160292",epoca:"10a.",inst:"Segunda Sala SCJN",fecha:"Libro V, feb-2012, Tomo 2, p. 1694",tipo:"Tesis aislada",oblig:"no",vig:"Vigente como criterio persuasivo",estado:"VERIFICADA"},
+{code:"PC.I.L. J/40 L (10a.)",rubro:"CONDICIONES GENERALES DE TRABAJO. SON APLICABLES A TODOS LOS TRABAJADORES DE BASE DE LA DEPENDENCIA DE QUE SE TRATE, INDEPENDIENTEMENTE DE QUE SE ENCUENTREN AFILIADOS O NO AL SINDICATO MAYORITARIO.",reg:"2017733",epoca:"10a.",inst:"Pleno en Materia de Trabajo del Primer Circuito",fecha:"Contradicción 2/2018, res. 25-jun-2018 (unanimidad, 17 votos); publ. 31-ago-2018, oblig. 3-sep-2018. Gaceta Libro 57, ago-2018, Tomo II, p. 1565",tipo:"Jurisprudencia",oblig:"no",vig:"Vigente",estado:"VERIFICADA — tesis central",note:"Obligatoria solo en Primer Circuito; persuasiva en Veracruz. Ordena inaplicar la disposición restrictiva."},
+{code:"I.6o.T.455 L",rubro:"LIBERTAD SINDICAL DE LOS TRABAJADORES AL SERVICIO DEL ESTADO. LOS BENEFICIOS ALCANZADOS POR UN SINDICATO MAYORITARIO, AL REVISAR LAS CONDICIONES GENERALES DE TRABAJO DE UNA DEPENDENCIA, DEBERÁN HACERSE EXTENSIVOS A TODAS LAS PERSONAS QUE TRABAJEN EN ELLA, CON INDEPENDENCIA DE SU FILIACIÓN SINDICAL.",reg:"163093",epoca:"9a.",inst:"Sexto TCC en Materia de Trabajo del Primer Circuito",fecha:"AD 1409/2009, 2-sep-2010; SJF y su Gaceta, Tomo XXXIII, ene-2011, p. 3220",tipo:"Tesis aislada",oblig:"warn",vig:"Superada por contradicción 2/2018, absorbida por PC.I.L. J/40 L",estado:"VERIFICADA, con advertencia",note:"NO citar como vigente sin advertir superación. Además es pro-extensión, no contraria: el criterio restrictivo en 2/2018 fue el del Séptimo TCC Trabajo Primer Circuito, AD 727/2017."},
+{code:"I.16o.T.4 L (11a.)",rubro:"LIBERTAD SINDICAL. SE VIOLA ESE DERECHO FUNDAMENTAL CUANDO EXISTEN CLÁUSULAS EN LAS CONDICIONES GENERALES DE TRABAJO PACTADAS ENTRE LAS DEPENDENCIAS DE LA ADMINISTRACIÓN PÚBLICA FEDERAL Y LOS SINDICATOS MAYORITARIOS, QUE IMPIDAN LA PARTICIPACIÓN DE LOS SINDICATOS MINORITARIOS EN EL SISTEMA DE EVALUACIÓN PARA EL DESEMPEÑO DE LOS TRABAJADORES PARA EL OTORGAMIENTO DE INCENTIVOS, ESTÍMULOS O RECOMPENSAS, POR LO QUE EN EL JUICIO DE AMPARO DIRECTO DEBE REPARARSE ESA INCONSTITUCIONALIDAD.",reg:"2025651",epoca:"11a.",inst:"Décimo Sexto TCC en Materia de Trabajo del Primer Circuito",fecha:"AD 413/2021, 24-sep-2021; publ. 9-dic-2022. Gaceta Libro 20, dic-2022, Tomo III, p. 2740",tipo:"Tesis aislada",oblig:"warn",vig:"Vigente como aislada, pero su remedio («modificar las cláusulas») quedó desplazado por ADR 3667/2025",estado:"VERIFICADA, con advertencia"},
+{code:"I.16o.T.5 L (11a.)",rubro:"LIBERTAD SINDICAL. DE ACUERDO CON ESE DERECHO FUNDAMENTAL, LOS SINDICATOS MINORITARIOS DE TRABAJADORES AL SERVICIO DEL ESTADO TIENEN DERECHO A PARTICIPAR EN COMISIONES, COMITÉS O CUALQUIER SISTEMA QUE TENGA COMO OBJETIVO PROPORCIONAR ESTÍMULOS, RECOMPENSAS O INCENTIVOS A FAVOR DE SUS AGREMIADOS.",reg:"2025650",epoca:"11a.",inst:"Décimo Sexto TCC en Materia de Trabajo del Primer Circuito",fecha:"Gaceta Libro 20, dic-2022, Tomo III, p. 2739",tipo:"Tesis aislada",oblig:"no",vig:"Vigente como aislada",estado:"VERIFICADA"},
+{code:"I.14o.T.44 L (11a.)",rubro:"LICENCIAS PARA EL DESEMPEÑO DE COMISIONES SINDICALES SOLICITADAS POR SINDICATOS MINORITARIOS. SU OTORGAMIENTO NO PUEDE CONDICIONARSE A LA PREFERENCIA QUE EL SINDICATO MAYORITARIO PUEDA TENER SOBRE ESOS PERMISOS.",reg:"2029560",epoca:"11a.",inst:"Décimo Cuarto TCC en Materia de Trabajo del Primer Circuito",fecha:"Publ. 22-nov-2024. Gaceta Libro 43, nov-2024, Tomo IV, Vol. 2, p. 1559",tipo:"Tesis aislada",oblig:"no",vig:"Vigente",estado:"VERIFICADA",note:"Relevancia indirecta: licencias, no becas."},
+{code:"2a./J. 50/2024 (11a.)",rubro:"INTERÉS LEGÍTIMO EN AMPARO INDIRECTO. NO LO TIENEN LOS TRABAJADORES, EN LO INDIVIDUAL, PARA IMPUGNAR LA TOMA DE NOTA DE UNA DIRECTIVA SINDICAL.",reg:"2028954",epoca:"11a.",inst:"Segunda Sala SCJN",fecha:"Aprob. 15-may-2024; publ. 7-jun-2024, oblig. 10-jun-2024",tipo:"Jurisprudencia",oblig:"yes",vig:"Vigente",estado:"VERIFICADA"},
+{code:"2a./J. 8/2021 (10a.)",rubro:"CUOTAS SINDICALES. LA NEGATIVA DE LOS TRABAJADORES AL DESCUENTO EN SU SALARIO NO CONTRAVIENE LOS PRINCIPIOS DE LIBERTAD Y DE AUTONOMÍA SINDICAL (LEGISLACIÓN VIGENTE A PARTIR DEL 1 DE MAYO DE 2019).",reg:"2022885",epoca:"10a.",inst:"Segunda Sala SCJN",fecha:"Publ. 26-mar-2021",tipo:"Jurisprudencia",oblig:"warn",vig:"Vigente",estado:"VERIFICADA, con ambigüedad",note:"Existe otra 2a./J. 8/2021 (11a.), reg. 2023722, sobre incapacidad parcial permanente del ISSSTE, irrelevante. Citar siempre con época (10a.) y registro 2022885."}
+];
+var NUEVOS=[
+{code:"PR.P.T.CS. J/16 L (12a.)",rubro:"COMISIONES SINDICALES. DEBE HACERSE EXTENSIVA LA CLÁUSULA 251 DEL CCT DE PEMEX, BIENIOS 2023-2025 Y 2025-2027 Y ANÁLOGOS, A LOS SINDICATOS MINORITARIOS QUE LO SOLICITEN DE FORMA PROPORCIONAL, CONFORME A IGUALDAD Y PLURALIDAD SINDICAL.",reg:"2032404",meta:"12a. · Pleno Regional Penal y Trabajo, Región Centro-Sur · Jurisprudencia",oblig:"yes",rel:"Alta como contexto; media como modelo. Publ. 10-jul-2026, oblig. 13-jul-2026. Región Centro-Sur comprende el Séptimo Circuito (Acuerdo General 67/2022, art. 8)."},
+{code:"ADR 3667/2025 — Pleno SCJN, 10-feb-2026",rubro:"Tribunales laborales no pueden modificar/reescribir cláusulas de CCT/CGT; solo ordenar su inaplicación en el caso concreto. Ponente: Irving Espinosa Betanzo.",reg:"Sin tesis numerada localizada — no citar registro",meta:"Pleno SCJN (12a.) · Precedente (sentencia)",oblig:"yes",rel:"Alta: fija el remedio correcto. Las razones por 6+ votos son obligatorias (art. 94 CPEUM)."},
+{code:"2a./J. 186/2007",rubro:"SINDICATOS DE UNA MISMA PROFESIÓN O ESPECIALIDAD EN UNA DEPENDENCIA DEL GOBIERNO FEDERAL. EL SINDICATO QUE AGREMIE A LA MAYORÍA… TIENE DERECHO A QUE SU OPINIÓN SEA TOMADA EN CUENTA PARA LA FIJACIÓN DE LAS CGT, ÚNICAMENTE POR LO QUE RESPECTA A LOS TRABAJADORES DE LA PROFESIÓN O ESPECIALIDAD QUE REPRESENTA…",reg:"171031",meta:"9a. · Segunda Sala · Jurisprudencia",oblig:"yes",rel:"Media: «opinión tomada en cuenta» ≠ apropiación de prestaciones."},
+{code:"2a./J. 9/2022 (11a.)",rubro:"PRESTACIONES EXTRALEGALES. EN RELACIONES DEL APARTADO A DEL ART. 123, CORRESPONDE AL TRABAJADOR APORTAR LAS PRUEBAS PARA DEMOSTRAR LA OBLIGACIÓN DEL PATRÓN DE PAGARLAS, AUNQUE EL DEMANDADO NO CONTESTE NI COMPAREZCA.",reg:"2024328",meta:"11a. · Segunda Sala · Jurisprudencia",oblig:"yes",rel:"Alta: carga de la prueba. Apartado A; en apartado B, persuasiva en cuanto al principio."},
+{code:"I.5o.T. J/5 L (11a.)",rubro:"CARGA DE LA PRUEBA RESPECTO DE PRESTACIONES EXTRALEGALES. CORRESPONDE AL PATRÓN DEMOSTRAR QUE EL ACTOR NO SE ENCUENTRA EN LOS SUPUESTOS PARA SU PERCEPCIÓN, CUANDO RECONOCE SU EXISTENCIA.",reg:"2025844",meta:"11a. · Quinto TCC Trabajo Primer Circuito · Jurisprudencia",oblig:"no",rel:"Alta: inversión de la carga si el Ayuntamiento reconoce las becas."},
+{code:"III.4o.T. J/3 (10a.)",rubro:"AUTORIDAD PARA EFECTOS DEL AMPARO. NO TIENE ESE CARÁCTER EL ENTE DE LA ADMINISTRACIÓN PÚBLICA O EL ORGANISMO PÚBLICO DESCENTRALIZADO QUE ES OMISO EN EL PAGO DEL SALARIO O QUE INCUMPLE PRESTACIONES DE ÍNDOLE LABORAL, AL ACTUAR COMO PATRÓN EN UNA RELACIÓN DE COORDINACIÓN.",reg:"2011298",meta:"10a. · Cuarto TCC Trabajo Tercer Circuito · Jurisprudencia",oblig:"no",rel:"Alta: improcedencia del amparo por no pago. Persuasiva en Séptimo, pero criterio reiterado."},
+{code:"VI.1o.A. J/54 (9a.)",rubro:"PETICIÓN. LA GARANTÍA CONTENIDA EN EL ARTÍCULO 8o. CONSTITUCIONAL SE CONFORMA DE DIVERSAS SUBGARANTÍAS QUE LE DAN CONTENIDO, Y QUE DEBEN CONSIDERARSE POR EL JUEZ DE DISTRITO EN EL JUICIO DE AMPARO PROMOVIDO POR VIOLACIÓN A DICHO DERECHO.",reg:"160206",meta:"9a. · Primer TCC Administrativo Sexto Circuito · Jurisprudencia",oblig:"no",rel:"Media: amparo por omisión de responder."},
+{code:"P./J. 50/2014 (10a.)",rubro:"INTERÉS LEGÍTIMO. CONTENIDO Y ALCANCE PARA EFECTOS DE LA PROCEDENCIA DEL JUICIO DE AMPARO (INTERPRETACIÓN DEL ARTÍCULO 107, FRACCIÓN I, CPEUM).",reg:"2007921",meta:"10a. · Pleno SCJN · Jurisprudencia",oblig:"yes",rel:"Alta: marco interés jurídico vs. legítimo."},
+{code:"PC.VII.L. — reg. 2022490",rubro:"SUPLETORIEDAD DE LA LEY FEDERAL DEL TRABAJO. RESULTA INAPLICABLE TRATÁNDOSE DE LA DECLARACIÓN DE INCOMPETENCIA DEL TRIBUNAL DE CONCILIACIÓN Y ARBITRAJE DENTRO DEL PROCEDIMIENTO DE HUELGA PREVISTO POR LA LESCV.",reg:"2022490",meta:"10a. · Pleno Trabajo Séptimo Circuito · Jurisprudencia",oblig:"yes",rel:"Media: la supletoriedad de la LFT en la LESCV no es automática."},
+{code:"VII.2o.T.271 L (10a.)",rubro:"COMPETENCIA PARA CONOCER DE LOS CONFLICTOS LABORALES… ENTRE ÓRGANOS CONSTITUCIONALES AUTÓNOMOS DEL ESTADO DE VERACRUZ Y SUS TRABAJADORES… CORRESPONDE AL TRIBUNAL ESTATAL DE CONCILIACIÓN Y ARBITRAJE.",reg:"2021646",meta:"10a. · Segundo TCC Trabajo Séptimo Circuito · Tesis aislada",oblig:"no",rel:"Baja-media: confirma competencia del Tribunal burocrático veracruzano. Aislada, pero del propio circuito."},
+{code:"I.9o.T.58 L (10a.)",rubro:"TRABAJADORES POR TIEMPO DETERMINADO DEL GOBIERNO DE LA CDMX. LES SON APLICABLES LAS CGT DE ESA ENTIDAD, AUN CUANDO NO SE HAYAN AGREMIADO A ALGUNA ORGANIZACIÓN SINDICAL…",reg:"Registro no verificado — no citar número",meta:"10a. · Noveno TCC Trabajo Primer Circuito · Tesis aislada",oblig:"no",rel:"Media: extiende CGT incluso a temporales no agremiados."}
+];
+var RIESGOS=[
+{d:"«Un sindicato sin registro no existe jurídicamente y carece de personería para demandar.»",f:"Falta de registro / toma de nota; régimen registral sindical por verificar en la LESCV vigente",r:"<b>Es el riesgo central de la vía 1.</b> Los criterios de extensión a minoritarios (PR.P.T.CS. J/16 L) presuponen sindicatos formalmente constituidos. Mitigar: acreditar acta constitutiva, padrón y solicitud de registro en trámite, pedir no exclusión provisional — y mantener la vía individual subsidiaria, que no depende de esta."},
+{d:"«Las becas son una prestación negociada con el sindicato titular; solo para sus afiliados.»",f:"Titularidad sindical; art. 388 LFT; 2a. I/2012",r:"<b>Débil en Veracruz:</b> art. 137 LESCV + PC.VII.L. J/2 L + PC.I.L. J/40 L. El privilegio admisible es negociar, no apropiarse. Riesgo: el Tribunal local puede dar peso a la titularidad si no se acredita el depósito de la CGT."},
+{d:"«El actor no acreditó la existencia de la prestación ni sus requisitos.»",f:"2a./J. 9/2022 (carga de extralegales)",r:"<b>Riesgo alto si la demanda es genérica.</b> Mitigar: exhibir CGT art. 78, convocatoria, constancias escolares, y aprovechar la inversión de la carga si el Ayuntamiento reconoce el reparto (I.5o.T. J/5 L)."},
+{d:"«Las 115 becas ya se agotaron; no hay disponibilidad presupuestal.»",f:"Art. 126 CPEUM; número cerrado en CGT",r:"<b>Riesgo medio.</b> Exigir la lista única ordenada por promedio/rotación: el agotamiento solo vale con criterios objetivos, no con cupos sindicales. Si se agotó por reparto sindical, es inválido. Pedir lista de espera."},
+{d:"«El reparto por cupos es proporcional y por tanto constitucional.»",f:"PR.P.T.CS. J/16 L, reg. 2032404",r:"<b>Confusión de modelos:</b> la proporcionalidad es para beneficios de sindicatos minoritarios que lo soliciten, no para excluir a un no afiliado. El actor no pide un cupo, pide la lista única."},
+{d:"«El memorándum es un acto patronal; el amparo es improcedente.»",f:"III.4o.T. J/3, reg. 2011298",r:"<b>Cierto para el amparo por impago;</b> pero no impide el juicio laboral, donde el Tribunal sí puede inaplicar la cláusula restrictiva. No basar la estrategia en el amparo indirecto por la beca."},
+{d:"«La prescripción de 1 año ya corrió.»",f:"Arts. 100–101 LESCV",r:"<b>Riesgo real según fechas.</b> Cada convocatoria tiene su propio cómputo; demandar pronto interrumpe (art. 105). Documentar la fecha de exigibilidad."},
+{d:"«El juez no puede modificar la CGT ni el memorándum.»",f:"ADR 3667/2025",r:"<b>Cierto — y favorable si se pide bien:</b> pedir inaplicación en el caso concreto y condena a otorgar la beca, no reescritura. No pedir que el Tribunal redacte un nuevo art. 78."},
+{d:"«El actor debió afiliarse; la libertad negativa no da derecho a prestaciones negociadas por otros.»",f:"Lectura restrictiva de 2a. I/2012",r:"<b>Débil:</b> P./J. 43/99 + PC.I.L. J/40 L + art. 137 LESCV dicen lo contrario; la libertad negativa incluye no afiliarse sin perder prestaciones de base."},
+{d:"«Falta de interés para impugnar la toma de nota / representatividad.»",f:"2a./J. 50/2024",r:"<b>Cierto:</b> no impugnar la toma de nota como trabajador individual; no es necesario para ganar las becas."},
+{d:"«Incompetencia del Tribunal / debe ir a Junta o a Tribunal Laboral federal.»",f:"—",r:"<b>Débil:</b> competencia del Tribunal de Conciliación y Arbitraje del PJ Veracruz (Ley Orgánica 231, 2025; VII.2o.T.271 L)."}
+];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function badge(o){if(o==="yes")return '<span class="badge badge-yes">Obligatoria en Séptimo</span>';if(o==="warn")return '<span class="badge badge-warn">Con advertencia</span>';return '<span class="badge badge-no">Persuasiva en Séptimo</span>'}
+function renderTesis(list){
+  document.getElementById("tesisGrid").innerHTML=list.map(function(t){
+    return '<article class="tesis"><div class="tesis-head"><span class="tesis-code">'+esc(t.code)+'</span><span>'+badge(t.oblig)+' <span class="badge badge-juris">'+esc(t.tipo)+'</span></span></div><h3>'+esc(t.rubro)+'</h3><div class="meta"><div><b>Registro</b>'+esc(t.reg)+'</div><div><b>Época / Instancia</b>'+esc(t.epoca)+' · '+esc(t.inst)+'</div><div><b>Estado</b>'+esc(t.estado)+'</div><div><b>Publicación</b>'+esc(t.fecha)+'</div><div><b>Vigencia a nov-2026</b>'+esc(t.vig)+'</div></div>'+(t.note?'<p class="small" style="margin-top:10px">'+esc(t.note)+'</p>':'')+'</article>';
+  }).join("")||'<p class="small">Sin resultados para ese filtro.</p>';
+  document.getElementById("count").textContent="Mostrando "+list.length+" tesis en esta vista. Son las 12 tesis verificadas que se muestran en tarjetas (ninguna inexistente).";
+}
+function renderNuevos(){
+  document.getElementById("nuevosGrid").innerHTML=NUEVOS.map(function(t){
+    return '<article class="tesis"><div class="tesis-head"><span class="tesis-code">'+esc(t.code)+'</span>'+badge(t.oblig)+'</div><h3>'+esc(t.rubro)+'</h3><div class="meta"><div><b>Registro</b>'+esc(t.reg)+'</div><div><b>Época / Instancia / Tipo</b>'+esc(t.meta)+'</div><div><b>Relevancia</b>'+esc(t.rel)+'</div></div></article>';
+  }).join("");
+}
+function renderRiesgos(){
+  document.getElementById("riskGrid").innerHTML=RIESGOS.map(function(r){
+    return '<article class="risk"><h3 style="margin:0 0 6px;font-size:15px">'+esc(r.d)+'</h3><p class="small" style="margin:0 0 6px">Fundamento que invocará: '+esc(r.f)+'</p><p style="font-size:14.5px;color:var(--ink2);margin:0">'+r.r+'</p></article>';
+  }).join("");
+}
+var filter="all";
+function apply(){
+  var q=(document.getElementById("q").value||"").toLowerCase();
+  var list=TESIS.filter(function(t){
+    if(filter!=="all"&&t.oblig!==filter) return false;
+    if(q && (t.code+" "+t.rubro+" "+t.reg+" "+t.inst).toLowerCase().indexOf(q)===-1) return false;
+    return true;
+  });
+  renderTesis(list);
+}
+document.getElementById("q").addEventListener("input",apply);
+document.querySelectorAll("[data-f]").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("[data-f]").forEach(function(x){x.classList.remove("active")});b.classList.add("active");filter=b.getAttribute("data-f");apply();})});
+renderTesis(TESIS); renderNuevos(); renderRiesgos();
+function escritoTextoPlano(){var el=document.getElementById("escritoTexto");return el?el.innerText.trim():""}
+var bc=document.getElementById("copiarEscrito");
+if(bc){bc.addEventListener("click",function(){var t=escritoTextoPlano();var msg=document.getElementById("escritoMsg");function ok(){if(msg)msg.textContent="Escrito copiado. Pégalo en tu procesador y llena los espacios entre corchetes."}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){if(msg)msg.textContent="No se pudo copiar automáticamente; selecciona el texto del escrito."})}else{if(msg)msg.textContent="Selecciona el texto del escrito para copiarlo."}})}
+var bd=document.getElementById("descargarEscrito");
+if(bd){bd.addEventListener("click",function(){var blob=new Blob([escritoTextoPlano()],{type:"text/plain;charset=utf-8"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="escrito-becas-doble-via-cordoba.txt";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);var msg=document.getElementById("escritoMsg");if(msg)msg.textContent="Archivo descargado. Es un borrador: llena los espacios entre corchetes antes de presentar."})}
+</script>
+</body>
+</html>
